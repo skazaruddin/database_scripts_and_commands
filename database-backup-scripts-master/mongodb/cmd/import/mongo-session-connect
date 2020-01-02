@@ -1,0 +1,14 @@
+mongo --username <username> --password <password> --authenticationDatabase <database name>  <host>
+
+mongo --username <username> --password <password> --authenticationDatabase <database name>  <host with database>
+
+e.g.
+
+mongo --username admin --password sdrc@mongo6356 --authenticationDatabase admin 192.168.1.10
+
+mongo --username admin --password sdrc@mongo6356 --authenticationDatabase admin 192.168.1.10/resturants
+
+
+#query to see all databases after connection:
+
+> show dbs
