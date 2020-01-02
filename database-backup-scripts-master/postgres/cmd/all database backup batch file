@@ -1,0 +1,17 @@
+
+cd \
+
+cd C:\Program Files\PostgreSQL\9.5\bin
+
+REM writing database names in F drive query.text file.
+ECHO writing database names in F drive query.text file.
+psql -U postgres -h localhost -p 5432 -c "COPY (SELECT datname from pg_database where datacl IS NULL) TO 'F:/query.text' (format text, delimiter ';')";
+
+
+FOR /F %%i IN (F:\query.text) DO (
+
+pg_dump  -h localhost -p 5432 -U postgres -F c -b -v -f  "F:\Database Backup\Postgre\%%i.backup"  %%i
+
+
+)
+
