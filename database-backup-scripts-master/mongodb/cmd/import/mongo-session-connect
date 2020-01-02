@@ -6,7 +6,7 @@ e.g.
 
 mongo --username admin --password sdrc@mongo6356 --authenticationDatabase admin 192.168.1.10
 
-mongo --username admin --password sdrc@mongo6356 --authenticationDatabase admin 192.168.1.10/resturants
+mongo --username admin --password sdrc@mongo6356 --authenticationDatabase admin 192.168.1.10/restaurants
 
 
 #query to see all databases after connection:
